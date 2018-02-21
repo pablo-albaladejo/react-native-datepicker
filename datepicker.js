@@ -351,6 +351,7 @@ class DatePicker extends Component {
         testID={testID}
       >
         <View style={[Style.dateTouchBody, customStyles.dateTouchBody]}>
+          {this._renderIcon()}
           {
             !this.props.hideText ?
               <View style={dateInputStyle}>
@@ -359,7 +360,6 @@ class DatePicker extends Component {
             :
               <View/>
           }
-          {this._renderIcon()}
           {Platform.OS === 'ios' && <Modal
             transparent={true}
             animationType="none"
